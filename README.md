@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# L'Arbre En Soi — Site Web Officiel
 
-## Getting Started
+Modern, sales-focused website for Sonia's sylvotherapy & energy healing practice.
 
-First, run the development server:
+🌐 **Live:** [larbrensoi-sonia.com](https://www.larbrensoi-sonia.com)
+
+---
+
+## Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS
+- **Language:** TypeScript
+- **Deploy:** Vercel
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy to Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Go to [vercel.com/new](https://vercel.com/new)
+2. Import this repo: `dream-ai-corp/larbrensoi-sonia`
+3. Framework: **Next.js** (auto-detected)
+4. Click **Deploy** — done.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+No environment variables required for the base site.
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  layout.tsx     # SEO metadata, fonts
+  page.tsx       # Full landing page
+  globals.css    # Base styles + Google Fonts
+tailwind.config.ts  # Custom colors (forest, cream, gold, sage)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design System
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Token | Value | Usage |
+|-------|-------|-------|
+| `forest-800` | `#1e6e1e` | Primary dark green |
+| `forest-700` | `#185818` | CTAs, nav |
+| `cream` | `#FAF7F0` | Page background |
+| `gold` | `#C9A96E` | Accents, highlights |
+| `sage` | `#7A9E7E` | Subtitles, labels |
 
-## Deploy on Vercel
+## Page Sections
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Nav** — Sticky, transparent → solid on scroll
+2. **Hero** — Benefits-first headline, dual CTA, live availability badge
+3. **Trust bar** — 4 key stats
+4. **Problem/Solution** — Pain points + benefits
+5. **Services** — 3 cards with prices (popular highlighted)
+6. **How it works** — 3-step process
+7. **About Sonia** — Trust + credentials
+8. **Testimonials** — 4 client reviews
+9. **FAQ** — 5 accordion items handling objections
+10. **Booking form** — Lead capture with success state
+11. **Footer** — Contact, links, legal disclaimer
