@@ -231,7 +231,7 @@ export default function Home() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="font-display text-2xl text-forest-800 font-medium">
+          <a href="#" className={`font-display text-2xl font-medium transition-colors ${scrolled ? "text-forest-800" : "text-white"}`}>
             L&apos;Arbre En Soi
           </a>
           <div className="hidden md:flex items-center gap-8">
@@ -239,20 +239,20 @@ export default function Home() {
               <a
                 key={link}
                 href={`#${link.toLowerCase().replace(/\s+/g, "-").replace("é", "e").replace("à", "a")}`}
-                className="text-sm text-gray-600 hover:text-forest-700 transition-colors"
+                className={`text-sm transition-colors ${scrolled ? "text-gray-600 hover:text-forest-700" : "text-white/80 hover:text-white"}`}
               >
                 {link}
               </a>
             ))}
             <a
               href="#reserver"
-              className="bg-forest-700 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-forest-600 transition-colors"
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${scrolled ? "bg-forest-700 text-white hover:bg-forest-600" : "bg-white/15 text-white border border-white/30 hover:bg-white/25"}`}
             >
               Réserver ma séance
             </a>
           </div>
           <button
-            className="md:hidden text-forest-800"
+            className={`md:hidden transition-colors ${scrolled ? "text-forest-800" : "text-white"}`}
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -422,8 +422,8 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section id="soins" className="py-24 px-6 bg-white overflow-hidden">
-        <div className="max-w-6xl mx-auto">
+      <section id="soins" className="py-24 bg-white overflow-hidden">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16 animate-on-scroll">
             <span className="text-sage font-medium text-sm uppercase tracking-widest">
               Les soins
@@ -582,8 +582,8 @@ export default function Home() {
       </section>
 
       {/* ── ABOUT ── */}
-      <section className="py-24 px-6 bg-forest-800 text-white">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-24 bg-forest-800 text-white">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="animate-on-scroll">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-forest-600 mx-auto flex items-center justify-center text-8xl shadow-2xl">
@@ -626,8 +626,8 @@ export default function Home() {
       </section>
 
       {/* ── TESTIMONIALS ── */}
-      <section id="temoignages" className="py-24 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section id="temoignages" className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16 animate-on-scroll">
             <span className="text-sage font-medium text-sm uppercase tracking-widest">
               Ils témoignent
@@ -681,8 +681,8 @@ export default function Home() {
       </section>
 
       {/* ── BOOKING FORM ── */}
-      <section id="reserver" className="py-24 px-6 bg-forest-800 text-white">
-        <div className="max-w-2xl mx-auto">
+      <section id="reserver" className="py-24 bg-forest-800 text-white">
+        <div className="max-w-2xl mx-auto px-6">
           <div className="text-center mb-12 animate-on-scroll">
             <span className="text-gold font-medium text-sm uppercase tracking-widest">
               Première étape
@@ -802,8 +802,8 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-forest-900 text-white/60 py-12 px-6">
-        <div className="max-w-5xl mx-auto">
+      <footer className="bg-forest-900 text-white/60 py-12">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="font-display text-xl text-white mb-3">L&apos;Arbre En Soi</h3>
