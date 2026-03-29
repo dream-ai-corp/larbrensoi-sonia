@@ -230,23 +230,23 @@ export default function Home() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-8 py-5 flex items-center justify-between">
           <a href="#" className={`font-display text-2xl font-medium transition-colors ${scrolled ? "text-forest-800" : "text-white"}`}>
             L&apos;Arbre En Soi
           </a>
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {["Soins", "Comment ça marche", "Témoignages", "FAQ"].map((link) => (
               <a
                 key={link}
                 href={`#${link.toLowerCase().replace(/\s+/g, "-").replace("é", "e").replace("à", "a")}`}
-                className={`text-sm transition-colors ${scrolled ? "text-gray-600 hover:text-forest-700" : "text-white/80 hover:text-white"}`}
+                className={`text-sm font-medium transition-colors ${scrolled ? "text-gray-600 hover:text-forest-700" : "text-white/80 hover:text-white"}`}
               >
                 {link}
               </a>
             ))}
             <a
               href="#reserver"
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${scrolled ? "bg-forest-700 text-white hover:bg-forest-600" : "bg-white/15 text-white border border-white/30 hover:bg-white/25"}`}
+              className={`px-6 py-3 rounded-full text-sm font-medium transition-colors ${scrolled ? "bg-forest-700 text-white hover:bg-forest-600" : "bg-white/15 text-white border border-white/30 hover:bg-white/25"}`}
             >
               Réserver ma séance
             </a>
@@ -311,13 +311,13 @@ export default function Home() {
             <em className="text-gold not-italic">équilibre profond</em>
           </h1>
 
-          <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-            Sylvothérapie & soins énergétiques avec Sonia. 
-            Une heure pour libérer les tensions, recharger votre vitalité 
+          <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+            Sylvothérapie & soins énergétiques avec Sonia.
+            Une heure pour libérer les tensions, recharger votre vitalité
             et retrouver la clarté intérieure.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
             <a
               href="#reserver"
               className="bg-gold hover:bg-yellow-600 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all hover:scale-105 shadow-lg"
@@ -440,7 +440,7 @@ export default function Home() {
             {services.map((service, i) => (
               <div
                 key={service.title}
-                className={`animate-on-scroll relative rounded-3xl p-8 flex flex-col ${
+                className={`animate-on-scroll relative rounded-3xl p-10 flex flex-col ${
                   service.popular
                     ? "bg-forest-800 text-white shadow-2xl"
                     : "bg-cream border border-forest-100"
@@ -452,34 +452,34 @@ export default function Home() {
                     LE PLUS POPULAIRE
                   </div>
                 )}
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="text-4xl mb-5">{service.icon}</div>
                 <h3
-                  className={`font-display text-2xl font-medium mb-1 ${
+                  className={`font-display text-2xl font-medium mb-2 ${
                     service.popular ? "text-white" : "text-forest-800"
                   }`}
                 >
                   {service.title}
                 </h3>
                 <p
-                  className={`text-sm mb-4 ${
+                  className={`text-sm mb-5 ${
                     service.popular ? "text-white/70" : "text-sage"
                   }`}
                 >
                   {service.subtitle}
                 </p>
                 <p
-                  className={`text-sm leading-relaxed mb-6 ${
+                  className={`text-sm leading-relaxed mb-7 ${
                     service.popular ? "text-white/80" : "text-gray-600"
                   }`}
                 >
                   {service.description}
                 </p>
 
-                <ul className="space-y-2 mb-8 flex-1">
+                <ul className="space-y-3 mb-8 flex-1">
                   {service.highlights.map((h) => (
                     <li
                       key={h}
-                      className={`text-sm flex items-start gap-2 ${
+                      className={`text-sm flex items-start gap-3 ${
                         service.popular ? "text-white/80" : "text-gray-600"
                       }`}
                     >
@@ -540,7 +540,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-12">
           {[
             {
               step: "01",
@@ -566,13 +566,13 @@ export default function Home() {
               className="animate-on-scroll text-center"
               style={{ transitionDelay: `${i * 0.15}s` }}
             >
-              <div className="relative inline-block mb-6 mt-6">
+              <div className="relative inline-block mb-8 mt-4">
                 <span className="font-display text-7xl text-forest-100 font-bold absolute -top-5 -left-5 leading-none select-none">
                   {step.step}
                 </span>
                 <span className="relative text-5xl">{step.icon}</span>
               </div>
-              <h3 className="font-display text-2xl text-forest-800 mb-3 font-medium">
+              <h3 className="font-display text-2xl text-forest-800 mb-4 font-medium">
                 {step.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">{step.desc}</p>
@@ -637,24 +637,26 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((t, i) => (
               <div
                 key={t.name}
-                className="animate-on-scroll bg-cream rounded-3xl p-8"
+                className="animate-on-scroll bg-cream rounded-3xl p-10"
                 style={{ transitionDelay: `${i * 0.1}s` }}
               >
-                <StarRating count={t.stars} />
-                <p className="text-gray-700 leading-relaxed mt-4 mb-6 text-lg font-light italic">
+                <div className="mb-5">
+                  <StarRating count={t.stars} />
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-7 text-lg font-light italic">
                   &ldquo;{t.text}&rdquo;
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-forest-200 flex items-center justify-center text-forest-700 font-semibold">
+                  <div className="w-12 h-12 rounded-full bg-forest-200 flex items-center justify-center text-forest-700 font-semibold text-lg">
                     {t.name[0]}
                   </div>
                   <div>
                     <div className="font-medium text-forest-800">{t.name}</div>
-                    <div className="text-gray-400 text-sm">{t.location}</div>
+                    <div className="text-gray-400 text-sm mt-0.5">{t.location}</div>
                   </div>
                 </div>
               </div>
@@ -706,11 +708,11 @@ export default function Home() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="animate-on-scroll space-y-4"
+              className="animate-on-scroll space-y-6"
             >
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-white/70 text-sm mb-2">
+                  <label className="block text-white/70 text-sm mb-3 font-medium">
                     Prénom & nom *
                   </label>
                   <input
@@ -720,12 +722,12 @@ export default function Home() {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full bg-forest-700 border border-forest-600 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gold transition-colors"
+                    className="w-full bg-forest-700 border border-forest-600 rounded-xl px-5 py-4 text-white placeholder-white/30 focus:outline-none focus:border-gold transition-colors"
                     placeholder="Marie Dupont"
                   />
                 </div>
                 <div>
-                  <label className="block text-white/70 text-sm mb-2">
+                  <label className="block text-white/70 text-sm mb-3 font-medium">
                     Téléphone *
                   </label>
                   <input
@@ -735,13 +737,13 @@ export default function Home() {
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
                     }
-                    className="w-full bg-forest-700 border border-forest-600 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gold transition-colors"
+                    className="w-full bg-forest-700 border border-forest-600 rounded-xl px-5 py-4 text-white placeholder-white/30 focus:outline-none focus:border-gold transition-colors"
                     placeholder="06 12 34 56 78"
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-white/70 text-sm mb-2">
+                <label className="block text-white/70 text-sm mb-3 font-medium">
                   Email *
                 </label>
                 <input
@@ -751,12 +753,12 @@ export default function Home() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full bg-forest-700 border border-forest-600 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gold transition-colors"
+                  className="w-full bg-forest-700 border border-forest-600 rounded-xl px-5 py-4 text-white placeholder-white/30 focus:outline-none focus:border-gold transition-colors"
                   placeholder="marie@email.com"
                 />
               </div>
               <div>
-                <label className="block text-white/70 text-sm mb-2">
+                <label className="block text-white/70 text-sm mb-3 font-medium">
                   Soin souhaité
                 </label>
                 <select
@@ -764,7 +766,7 @@ export default function Home() {
                   onChange={(e) =>
                     setFormData({ ...formData, service: e.target.value })
                   }
-                  className="w-full bg-forest-700 border border-forest-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold transition-colors"
+                  className="w-full bg-forest-700 border border-forest-600 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-gold transition-colors"
                 >
                   <option value="">Choisir un soin...</option>
                   <option value="energetique">Séance Énergétique 4 Éléments — 55€</option>
@@ -774,26 +776,26 @@ export default function Home() {
                 </select>
               </div>
               <div>
-                <label className="block text-white/70 text-sm mb-2">
+                <label className="block text-white/70 text-sm mb-3 font-medium">
                   Ce que vous vivez en ce moment (optionnel)
                 </label>
                 <textarea
-                  rows={3}
+                  rows={4}
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full bg-forest-700 border border-forest-600 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gold transition-colors resize-none"
+                  className="w-full bg-forest-700 border border-forest-600 rounded-xl px-5 py-4 text-white placeholder-white/30 focus:outline-none focus:border-gold transition-colors resize-none"
                   placeholder="Stress, fatigue, anxiété, questionnement... Partagez ce qui vous amène."
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-gold hover:bg-yellow-500 text-white font-semibold py-4 rounded-full text-lg transition-all hover:scale-105 shadow-lg mt-4"
+                className="w-full bg-gold hover:bg-yellow-500 text-white font-semibold py-4 rounded-full text-lg transition-all hover:scale-105 shadow-lg mt-6"
               >
                 Envoyer ma demande de réservation →
               </button>
-              <p className="text-white/40 text-xs text-center">
+              <p className="text-white/40 text-xs text-center mt-4">
                 Réponse garantie sous 24h · Sans engagement · Appel découverte offert
               </p>
             </form>
@@ -802,31 +804,31 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-forest-900 text-white/60 py-12">
+      <footer className="bg-forest-900 text-white/60 py-16">
         <div className="max-w-5xl mx-auto px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
-              <h3 className="font-display text-xl text-white mb-3">L&apos;Arbre En Soi</h3>
+              <h3 className="font-display text-xl text-white mb-4">L&apos;Arbre En Soi</h3>
               <p className="text-sm leading-relaxed">
                 Sylvothérapie & soins énergétiques à Aubinges, près de Bourges.
                 Retrouvez votre équilibre naturel.
               </p>
             </div>
             <div>
-              <h4 className="text-white text-sm font-semibold uppercase tracking-widest mb-3">
+              <h4 className="text-white text-sm font-semibold uppercase tracking-widest mb-4">
                 Contact
               </h4>
-              <div className="space-y-2 text-sm">
+              <div className="space-y-3 text-sm">
                 <p>📍 8 La Brosse Village, 18220 Aubinges</p>
                 <p>🕐 Sur rendez-vous uniquement</p>
                 <p>📞 Demande via le formulaire</p>
               </div>
             </div>
             <div>
-              <h4 className="text-white text-sm font-semibold uppercase tracking-widest mb-3">
+              <h4 className="text-white text-sm font-semibold uppercase tracking-widest mb-4">
                 Liens rapides
               </h4>
-              <div className="space-y-2 text-sm">
+              <div className="space-y-3 text-sm">
                 <a href="#soins" className="block hover:text-white transition-colors">Nos soins</a>
                 <a href="#temoignages" className="block hover:text-white transition-colors">Témoignages</a>
                 <a href="#faq" className="block hover:text-white transition-colors">FAQ</a>
@@ -834,9 +836,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
             <p>© 2026 L&apos;Arbre En Soi · Sonia · Tous droits réservés</p>
-            <p>
+            <p className="text-center md:text-right">
               Un énergéticien ne pose pas de diagnostic médical. Les séances sont complémentaires à votre suivi médical.
             </p>
           </div>
