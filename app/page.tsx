@@ -422,7 +422,7 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section id="soins" className="py-24 px-6 bg-white">
+      <section id="soins" className="py-24 px-6 bg-white overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-on-scroll">
             <span className="text-sage font-medium text-sm uppercase tracking-widest">
@@ -442,7 +442,7 @@ export default function Home() {
                 key={service.title}
                 className={`animate-on-scroll relative rounded-3xl p-8 flex flex-col ${
                   service.popular
-                    ? "bg-forest-800 text-white shadow-2xl scale-105"
+                    ? "bg-forest-800 text-white shadow-2xl md:scale-105"
                     : "bg-cream border border-forest-100"
                 }`}
                 style={{ transitionDelay: `${i * 0.15}s` }}
@@ -530,7 +530,7 @@ export default function Home() {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section id="comment-ca-marche" className="py-24 px-6 max-w-5xl mx-auto">
+      <section id="comment-ca-marche" className="py-24 px-6 max-w-5xl mx-auto overflow-hidden">
         <div className="text-center mb-16 animate-on-scroll">
           <span className="text-sage font-medium text-sm uppercase tracking-widest">
             Simple & transparent
@@ -566,8 +566,8 @@ export default function Home() {
               className="animate-on-scroll text-center"
               style={{ transitionDelay: `${i * 0.15}s` }}
             >
-              <div className="relative inline-block mb-6">
-                <span className="font-display text-8xl text-forest-100 font-bold absolute -top-4 -left-4 leading-none">
+              <div className="relative inline-block mb-6 mt-6">
+                <span className="font-display text-7xl text-forest-100 font-bold absolute -top-5 -left-5 leading-none select-none">
                   {step.step}
                 </span>
                 <span className="relative text-5xl">{step.icon}</span>
