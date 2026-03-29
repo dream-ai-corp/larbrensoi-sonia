@@ -31,6 +31,21 @@ interface FAQ {
 
 const services: Service[] = [
   {
+    icon: "🌳",
+    title: "Sylvothérapie",
+    subtitle: "La nature comme alliée de guérison",
+    description:
+      "Reconnectez-vous au vivant. La sylvothérapie utilise la force thérapeutique des arbres pour réduire le stress, renforcer l'immunité et retrouver un ancrage profond dans le présent.",
+    duration: "1h30 à 2h",
+    price: "Sur devis",
+    highlights: [
+      "En pleine nature, en forêt",
+      "Exercices de pleine conscience",
+      "Ancrage et enracinement profond",
+      "Reconnexion au rythme naturel",
+    ],
+  },
+  {
     icon: "🌿",
     title: "Séance Énergétique 4 Éléments",
     subtitle: "Rééquilibrage profond corps & âme",
@@ -45,21 +60,6 @@ const services: Service[] = [
       "Transmission d'énergie universelle",
     ],
     popular: true,
-  },
-  {
-    icon: "🌳",
-    title: "Sylvothérapie",
-    subtitle: "La nature comme alliée de guérison",
-    description:
-      "Reconnectez-vous au vivant. La sylvothérapie utilise la force thérapeutique des arbres pour réduire le stress, renforcer l'immunité et retrouver un ancrage profond dans le présent.",
-    duration: "1h30 à 2h",
-    price: "Sur devis",
-    highlights: [
-      "En pleine nature, en forêt",
-      "Exercices de pleine conscience",
-      "Ancrage et enracinement profond",
-      "Reconnexion au rythme naturel",
-    ],
   },
   {
     icon: "✨",
@@ -347,7 +347,7 @@ export default function Home() {
 
       {/* ── TRUST BAR ── */}
       <section className="bg-forest-800 text-white py-5">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { value: "200+", label: "Personnes accompagnées" },
@@ -365,7 +365,7 @@ export default function Home() {
       </section>
 
       {/* ── PROBLEM / SOLUTION ── */}
-      <section className="py-24 px-6 max-w-5xl mx-auto">
+      <section className="py-24 px-8 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="animate-on-scroll">
             <span className="text-sage font-medium text-sm uppercase tracking-widest">
@@ -422,8 +422,8 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section id="soins" className="py-24 bg-white overflow-hidden">
-        <div className="max-w-5xl mx-auto px-6">
+      <section id="soins" className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-8">
           <div className="text-center mb-16 animate-on-scroll">
             <span className="text-sage font-medium text-sm uppercase tracking-widest">
               Les soins
@@ -442,7 +442,7 @@ export default function Home() {
                 key={service.title}
                 className={`animate-on-scroll relative rounded-3xl p-8 flex flex-col ${
                   service.popular
-                    ? "bg-forest-800 text-white shadow-2xl md:scale-105"
+                    ? "bg-forest-800 text-white shadow-2xl"
                     : "bg-cream border border-forest-100"
                 }`}
                 style={{ transitionDelay: `${i * 0.15}s` }}
@@ -530,7 +530,7 @@ export default function Home() {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section id="comment-ca-marche" className="py-24 px-6 max-w-5xl mx-auto overflow-hidden">
+      <section id="comment-ca-marche" className="py-24 px-8 max-w-5xl mx-auto overflow-hidden">
         <div className="text-center mb-16 animate-on-scroll">
           <span className="text-sage font-medium text-sm uppercase tracking-widest">
             Simple & transparent
@@ -583,7 +583,7 @@ export default function Home() {
 
       {/* ── ABOUT ── */}
       <section className="py-24 bg-forest-800 text-white">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="animate-on-scroll">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-forest-600 mx-auto flex items-center justify-center text-8xl shadow-2xl">
@@ -627,7 +627,7 @@ export default function Home() {
 
       {/* ── TESTIMONIALS ── */}
       <section id="temoignages" className="py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-8">
           <div className="text-center mb-16 animate-on-scroll">
             <span className="text-sage font-medium text-sm uppercase tracking-widest">
               Ils témoignent
@@ -664,7 +664,7 @@ export default function Home() {
       </section>
 
       {/* ── FAQ ── */}
-      <section id="faq" className="py-24 px-6 max-w-3xl mx-auto">
+      <section id="faq" className="py-24 px-8 max-w-3xl mx-auto">
         <div className="text-center mb-16 animate-on-scroll">
           <span className="text-sage font-medium text-sm uppercase tracking-widest">
             Vos questions
@@ -682,7 +682,7 @@ export default function Home() {
 
       {/* ── BOOKING FORM ── */}
       <section id="reserver" className="py-24 bg-forest-800 text-white">
-        <div className="max-w-2xl mx-auto px-6">
+        <div className="max-w-2xl mx-auto px-8">
           <div className="text-center mb-12 animate-on-scroll">
             <span className="text-gold font-medium text-sm uppercase tracking-widest">
               Première étape
@@ -803,7 +803,7 @@ export default function Home() {
 
       {/* ── FOOTER ── */}
       <footer className="bg-forest-900 text-white/60 py-12">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="font-display text-xl text-white mb-3">L&apos;Arbre En Soi</h3>
